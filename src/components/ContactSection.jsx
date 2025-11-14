@@ -26,7 +26,24 @@ export const ContactSection = () => {
               </div>
               <p className="font-medium">Email</p>
               <a
-                href="mailto:kartikshetty9403@gmail.com"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const gmailUrl =
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=kartikshetty9403@gmail.com";
+                  const mailtoUrl = "mailto:kartikshetty9403@gmail.com";
+
+                  // Try opening Gmail in a new tab
+                  const newWindow = window.open(gmailUrl, "_blank");
+                  if (
+                    !newWindow ||
+                    newWindow.closed ||
+                    typeof newWindow.closed === "undefined"
+                  ) {
+                    // If popup blocked, fallback to mailto
+                    window.location.href = mailtoUrl;
+                  }
+                }}
                 className="text-muted-foreground hover:text-primary transition"
               >
                 kartikshetty9403@gmail.com
