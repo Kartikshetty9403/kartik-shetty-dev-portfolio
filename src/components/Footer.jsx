@@ -6,7 +6,7 @@ export const Footer = () => {
       {" "}
       <p className="text-sm text-muted-foreground">
         {" "}
-        &copy; {new Date().getFullYear()} Kartik Shetty. All rights reserved.
+        &copy; {new Date().getFullYear()} Made By Kartik Shetty.
       </p>
       <a
         href="#hero"
